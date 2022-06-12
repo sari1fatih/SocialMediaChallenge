@@ -1,0 +1,26 @@
+{
+  "name": "unit-test",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx nodemon ./bin/www"
+  },
+  "keywords": [],
+  "author": "Fatih SARI",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "express-async-handler": "^1.1.4",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "linq": "^4.0.0",
+    "morgan": "~1.9.1",
+    "path": "^0.12.7",
+    "pg": "^8.7.3"
+  }
+}

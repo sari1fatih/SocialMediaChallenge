@@ -1,0 +1,586 @@
+{
+	"info": {
+		"_postman_id": "eed76ff6-782e-4b63-9323-99216c30dee2",
+		"name": "SocialMediaChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3969911"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"profile_picture\":\"http://google/picture/fatihsari\",\r\n    \"full_name\":\"Fatih Sari\", \r\n    \"email\":\"fatihsari@gmail.com\",\r\n    \"bio\":\"Bio detay\",\r\n    \"username\": \"sari1fatih1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bio\": \"bio bu\",\r\n      \"email\": \"Hakkı Hakyemez\",\r\n    \"full_name\": \"full name bu\",\r\n    \"id\": 42,\r\n    \"profile_picture\": \"profile picture bu\",\r\n    \"username\": \"fatih\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bio\": \"bio bu\",\r\n     \r\n    \"full_name\": \"full name bu\",\r\n    \"id\":52,\r\n    \"profile_picture\": \"profile picture bu\",\r\n    \"username\": \"fatih\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Like",
+			"item": [
+				{
+					"name": "GetList ( Tüm Like ları Görmek İçin Gereksiz Sekilde Yapıldı )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/like",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"like"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetList ( Tüm Like ları Görmek İçin Gereksiz Sekilde Yapıldı )",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/like",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"like"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Jun 2022 03:16:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 12,\n            \"post_id\": 6,\n            \"user_id\": 48,\n            \"to_timestamp\": \"2022-06-11T19:08:04.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"post_id\": 6,\n            \"user_id\": 50,\n            \"to_timestamp\": \"2022-06-11T18:42:17.000Z\"\n        }\n    ],\n    \"isSuccess\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "GetListByPostId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/like/getListByPostId?postid=6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"like",
+								"getListByPostId"
+							],
+							"query": [
+								{
+									"key": "postid",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"post_id\":6,\r\n    \"user_id\":48\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/like/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"like",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/like/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"like",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "GetList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"user_id\":48,\r\n    \"post_ids\":[2,3,6]\r\n     \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MergePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"list_of_posts\": [\r\n        [\r\n            {\r\n                \"id\": 1,\r\n                \"description\": \"Sabah Keyfee\",\r\n                \"image\": \"http://sabahkeyfe.image\",\r\n                \"created_at\": 1654972752\r\n            },\r\n              {\r\n                \"id\": 1,\r\n                \"description\": \"Sabah Keyfee\",\r\n                \"image\": \"http://sabahkeyfe.image\",\r\n                \"created_at\": 1654972752\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"description\": \"Kardeşlerimle foto\",\r\n                \"image\": \"http://kardeslerkeyfe.image\",\r\n                \"created_at\": 1654972758\r\n            }\r\n        ],\r\n        [\r\n            {\r\n                \"id\": 3,\r\n                \"description\": \"İlk Gün\",\r\n                \"image\": \"http://ilgun.image\",\r\n                \"created_at\": 1654972740\r\n            },\r\n            {\r\n                \"id\": 1,\r\n                \"description\": \"Sabah Keyfee\",\r\n                \"image\": \"http://sabahkeyfe.image\",\r\n                \"created_at\": 1654972752\r\n            }\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post/mergePost",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"mergePost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListbyUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/post/byUserId?userid=48",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"byUserId"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "48"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetListbyUserId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/post/byUserId?userid=48",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"post",
+										"byUserId"
+									],
+									"query": [
+										{
+											"key": "userid",
+											"value": "48"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "327"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 Jun 2022 03:16:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 5,\n            \"description\": \"Kahve Keyfii\",\n            \"user_id\": 48,\n            \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQAB\",\n            \"to_timestamp\": \"2022-06-11T18:38:48.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"description\": \"Günaydın\",\n            \"user_id\": 48,\n            \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQAB\",\n            \"to_timestamp\": \"2022-06-11T18:00:10.000Z\"\n        }\n    ],\n    \"isSuccess\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"description\":\"Burası bir karpuz tarlası\",\r\n    \"user_id\":49,\r\n    \"image\":\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQAB\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 2,\r\n    \"description\":\"Günaydın\",\r\n    \"user_id\":48,\r\n    \"image\":\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQAB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Follow",
+			"item": [
+				{
+					"name": "GetListWhoFollowingByFollowerId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/follow/getListWhoFollowing?followerId=50",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"follow",
+								"getListWhoFollowing"
+							],
+							"query": [
+								{
+									"key": "followerId",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListWhoFollowerByFollowerId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/follow/getListWhoFollower?followerId=50",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"follow",
+								"getListWhoFollower"
+							],
+							"query": [
+								{
+									"key": "followerId",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"follower_id\":48,\r\n    \"following_id\":51\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/follow/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"follow",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"follower_id\":48,\r\n    \"following_id\":51\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/follow/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"follow",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
