@@ -7,7 +7,7 @@ Navigate to the postgres file path with terminal. That you can use the postgres 
 You need to install Postgresql for database. That you can restore "dump-socialMedia-202206121858".
 
 If Docker no exists:
-You need to install Postgresql for database. That you can respore "dump-socialMedia-202206121858".
+You need to install Postgresql for database. That you can restore "dump-socialMedia-202206121858".
 
 # Api
 Postman or insomnia must be installed on the computer.That you can import to "SocialMediaChallenge.postman_collection.json"
