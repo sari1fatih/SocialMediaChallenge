@@ -4,7 +4,7 @@
 
 If Docker exists:
 Navigate to the postgres file path with terminal. That you can use the postgres database by saying "docker-compose up -d".You can connect to the database using Dbeaver.
-You need to install Postgresql for database. That you can restore "dump-socialMedia-202206121858".
+You dont need to install Postgresql for database. That you can restore "dump-socialMedia-202206121858".
 
 If Docker no exists:
 You need to install Postgresql for database. That you can restore "dump-socialMedia-202206121858".
