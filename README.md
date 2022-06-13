@@ -3,7 +3,7 @@
 ![database](https://user-images.githubusercontent.com/33065479/173246192-6b6e1fff-b0f7-4e96-9c61-353929d062cb.png)
 
 If Docker exists:
-Navigate to the postgres file path with terminal. That you can use the postgres database by saying "docker-compose up -d".You can connect to the database using Dbeaver.
+Navigate to the postgres file path with terminal. That you can use the postgres database by saying "docker-compose up -d".You can connect to the database using Dbeaver for database's user interface.
 You dont need to install Postgresql for database. That you can restore "dump-socialMedia-202206121858".
 
 If Docker no exists:
